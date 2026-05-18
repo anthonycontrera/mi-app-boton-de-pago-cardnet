@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda CardNET</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Tienda Demo</h1>
+</header>
+
+<div class="container">
+  <div id="products"></div>
+
+  <div class="cart">
+    <h2>Carrito</h2>
+    <div id="cartItems"></div>
+
+    <p>Total: <span id="total">0</span></p>
+
+    <button onclick="payWithCardnet()">Pagar con CardNET</button>
+  </div>
+</div>
+
+<div id="paymentMessage"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

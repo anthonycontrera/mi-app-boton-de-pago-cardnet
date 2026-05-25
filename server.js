@@ -172,13 +172,13 @@ const transactionId = String(Date.now()).slice(-6);
         MerchantType: "9399",
         MerchantNumber: "349100111",
         MerchantTerminal: "10311240",
-        ReturnUrl: `${BASE_URL}/resultado`,
-        CancelUrl: `${BASE_URL}/resultado`,
+        ReturnUrl: "https://mi-app-boton-de-pago-cardnet.onrender.com/resultado",
+        CancelUrl: "https://mi-app-boton-de-pago-cardnet.onrender.com/resultado",
         PageLanguaje: "ESP",
         OrdenId: ordenId,
         TransactionId: transactionId,
         Tax: "0",
-        MerchantName: "PRUEBA",
+        MerchantName: "PRUEBA CARDNET",
         Amount: body.amount.toString()
       };
 

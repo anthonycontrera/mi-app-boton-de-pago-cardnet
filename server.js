@@ -165,22 +165,26 @@ const server = http.createServer(async (req, res) => {
       const ordenId = String(Date.now()).slice(-10);
 const transactionId = String(Date.now()).slice(-6);
 
-      const payload = {
-        TransactionType: "200",
-        CurrencyCode: "214",
-        AcquiringInstitutionCode: "349",
-        MerchantType: "9399",
-        MerchantNumber: "349100111",
-        MerchantTerminal: "10311240",
-        ReturnUrl: "https://mi-app-boton-de-pago-cardnet.onrender.com/resultado",
-        CancelUrl: "https://mi-app-boton-de-pago-cardnet.onrender.com/resultado",
-        PageLanguaje: "ESP",
-        OrdenId: ordenId,
-        TransactionId: transactionId,
-        Tax: "0",
-        MerchantName: "PRUEBA CARDNET",
-        Amount: body.amount.toString()
-      };
+const amount = Number(body.amount);
+
+const payload = {
+  TransactionType: "200",
+  CurrencyCode: "214",
+  AcquiringInstitutionCode: "349",
+  MerchantType: "5812",
+  MerchantNumber: "349011300",
+  MerchantTerminal: "00988330",
+  ReturnUrl: "http://localhost:3001/resultado",
+  CancelUrl: "http://localhost:3001/resultado",
+  PageLanguaje: "ESP",
+  OrdenId: ordenId,
+  TransactionId: transactionId,
+  Tax: "0.00",
+  MerchantName: "PRUEBA CARDNET",
+  Amount: amount.toFixed(2),
+  "3DS_email": "marianelsa442@hotmail.com",
+  "3DS_mobilePhone": "8298062770"
+};
 
       console.log("📤 REQUEST CARDNET:", payload);
 

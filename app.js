@@ -1,6 +1,11 @@
 const products = [
   { id: 1, name: "Mouse", price: 500 },
-  { id: 2, name: "Teclado", price: 1500 }
+  { id: 2, name: "Teclado", price: 1500 },
+  { id: 3, name: "Bocina", price: 5000 },
+  { id: 4, name: "Teclado", price: 10000 },
+  { id: 5, name: "Monitor", price: 15000 },
+   { id: 6, name: "impresora", price: 30000 },
+    { id: 7, name: "PC", price:45000 }
 ];
 
 let cart = [];
